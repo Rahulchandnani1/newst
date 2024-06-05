@@ -1,0 +1,62 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+ 
+</style>
+
+<main class="main">
+  <div class="content">
+   <nav>
+<button (click)="opensb()">
+  <img src="../assets/np.jpg"/>
+</button>
+   </nav>
+   <div class="sidebardiv"  *ngIf="side">
+   <div class="sidebar">
+<button class="closebtn" (click)="opensb()">X</button>
+<div class="btndiv">
+  <button (click)="newcl()">Home Page</button>
+  <button (click)="newcl()" routerLink="/about">About Us</button>
+  <button (click)="newcl()" routerLink="/contact">Contact Us</button>
+  <button (click)="newcl()">Careers</button>
+  
+</div>
+   </div>
+   <div class="tpdiv" (click)="opensb1()">
+
+   </div>
+   </div>
+
+   <div class="maindiv" >
+<div class="carouseldiv">
+<button (click)="prevbtn()">&lt;</button>
+<div> 
+  <video style="width: 100%;height: 100%; border-radius: 20px;" controls *ngIf="isvideo">
+    <source [src]="dmarr[val]" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <img  [ngClass]="{'nodiv': !isimg, 'divp': isimg}" style="width: 100%;height: 100%; border-radius: 20px;" [src]="dmarr[val]" *ngIf="isimg" />
+</div>
+<button (click)="nextbtn()">&gt;</button>
+</div>
+   </div>
+  </div>
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />
